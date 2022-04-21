@@ -5,7 +5,7 @@ Creare una funzione per capire se la parola inserita è palindroma
 */
 
 // Chiedo parola all'utente
-let userWord = prompt("Inserisci una parola");
+const userWord = prompt("Inserisci una parola");
 let result = false;
 
 console.log("La parola inserita è: ", userWord);
