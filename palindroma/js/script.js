@@ -10,9 +10,9 @@ let result = false;
 
 console.log("La parola inserita è: ", userWord);
 
-let checkPalindrom = palindrometer(userWord);
+let userWordReversed = wordReverser(userWord);
 
-if (checkPalindrom === userWord) {
+if (userWordReversed === userWord) {
     result = true;
 }
 
@@ -20,6 +20,6 @@ console.log("Verifica se la parola inserita è palindroma... ", result);
 
 // Funzione per check palindroma
 // Descrizione: la funzione inverte l'ordine delle lettere della parola inserita, cosi da poter controllare se la parola resta la stessa, ergo se è palindroma
-function palindrometer(word){
+function wordReverser(word){
     return word.split("").reverse().join("");
 }

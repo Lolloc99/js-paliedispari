@@ -8,11 +8,19 @@ Dichiariamo chi ha vinto.
 */
 
 // Chiedo all'utente di scegliere pari o dispari
-const userEvenOdd = prompt("Scegli pari o dispari");
+let userEvenOdd;
+do {
+    userEvenOdd = (prompt("Scegli pari o dispari")).toLowerCase();
+} while (userEvenOdd !== "pari" && userEvenOdd !== "dispari");
+
 console.log("Il giocatore ha scelto:", userEvenOdd);
 
 // Chideo di inserire un numero compreso tra 1 e 5
-const userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
+let userNumber;
+do {
+    userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
+} while (userNumber < 1 || userNumber > 5);
+
 console.log("Numero utente:", userNumber);
 
 // Genero casualmente un numero compreso da 1 a 5 per la macchina usando una funzione
@@ -36,7 +44,7 @@ if (userEvenOdd === judgement) {
 // FUNCTIONS
 
 function rndNumberGenerator(rndNum) {
-    rndNum = Math.floor(Math.random()*5)+1;
+    rndNum = Math.floor(Math.random() * 5) + 1;
     return rndNum;
 }
 
